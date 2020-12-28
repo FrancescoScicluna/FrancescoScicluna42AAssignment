@@ -7,10 +7,12 @@ public class ObstaclePathing : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float obstacleMoveSpeed = 2f;
 
+    [SerializeField] WaveConfig waveConfig;
     int waypointIndex = 0;
 
     private void Start()
     {
+        waypoints = waveConfig.GetWaypoints();
         transform.position = waypoints[waypointIndex].transform.position;
     }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7679244644900199290}
   - component: {fileID: 8350118884594447938}
-  - component: {fileID: 2832954132053344575}
+  - component: {fileID: -7549835271397334559}
   m_Layer: 0
   m_Name: OpposingCar
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2832954132053344575
+--- !u!114 &-7549835271397334559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +97,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   obstacleMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: cab30bc6d83b6ea468bca7d9dd4996c6, type: 2}
