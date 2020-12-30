@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-   
+    [SerializeField] float health = 100f;
     [SerializeField] float moveSpeed = 10f;
     float xMin, xMax;
     float padding = 0.5f;
+
+    private void OnTriggerEnter2D(Collider2D otherobject)
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
