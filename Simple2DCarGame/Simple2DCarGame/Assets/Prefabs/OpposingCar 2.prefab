@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6260056858652025368}
   - component: {fileID: 7499871788119841043}
   - component: {fileID: 5195202050585218005}
+  - component: {fileID: 865620324465092104}
+  - component: {fileID: 7858887573087513003}
   m_Layer: 0
   m_Name: OpposingCar 2
   m_TagString: Untagged
@@ -97,3 +99,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: cab30bc6d83b6ea468bca7d9dd4996c6, type: 2}
+--- !u!114 &865620324465092104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945861834433384735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180c5a116a5e3784aa9bc6206b288eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 3677104289403730215, guid: 5321c9eb242219e4cbbd84e18dab6599, type: 3}
+  obstacleLaserSpeed: 5
+--- !u!114 &7858887573087513003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945861834433384735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce73fbf0d02e899488a370466e92d50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

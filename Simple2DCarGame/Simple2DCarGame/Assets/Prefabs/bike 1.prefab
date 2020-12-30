@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 410124088071453348}
   - component: {fileID: 4593377096647639765}
   - component: {fileID: 1368176890747494559}
+  - component: {fileID: 169138666899391834}
   m_Layer: 0
   m_Name: bike 1
   m_TagString: Untagged
@@ -97,3 +98,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: c656e8f9a7088944c9bdd077ec8124d8, type: 2}
+--- !u!114 &169138666899391834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823757693099275279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180c5a116a5e3784aa9bc6206b288eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 3677104289403730215, guid: 5321c9eb242219e4cbbd84e18dab6599, type: 3}
+  obstacleLaserSpeed: 0.3

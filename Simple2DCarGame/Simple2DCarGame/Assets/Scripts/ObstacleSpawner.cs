@@ -5,14 +5,16 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigList;
-
+    [SerializeField] bool looping = false;
     int startingWave = 0;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        var currentWave = waveConfigList[startingWave];
-        StartCoroutine(SpawnAllWaves());
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        }while(looping);
     }
 
     // Update is called once per frame

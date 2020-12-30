@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1992258943107910883}
   - component: {fileID: 392135462211034993}
   - component: {fileID: 8048296206574830602}
+  - component: {fileID: -8771317587943115507}
   m_Layer: 0
   m_Name: policecar
   m_TagString: Untagged
@@ -97,3 +98,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: b6e2d8b385bed3141a9a56d29658d601, type: 2}
+--- !u!114 &-8771317587943115507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801740002233604685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180c5a116a5e3784aa9bc6206b288eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 3677104289403730215, guid: 5321c9eb242219e4cbbd84e18dab6599, type: 3}
+  obstacleLaserSpeed: 0.3

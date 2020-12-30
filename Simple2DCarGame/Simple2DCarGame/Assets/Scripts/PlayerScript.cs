@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] float health = 100f;
+    [SerializeField] float health = 10f;
     [SerializeField] float moveSpeed = 10f;
+    
     float xMin, xMax;
     float padding = 0.5f;
 
-    private void OnTriggerEnter2D(Collider2D otherobject)
+    private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update
