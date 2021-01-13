@@ -6,7 +6,9 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] float health = 10f;
     [SerializeField] float moveSpeed = 10f;
-    
+
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
     float xMin, xMax;
     float padding = 0.5f;
 
@@ -21,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         health -= dmgDealer.GetDamage();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -55,4 +57,9 @@ public class PlayerScript : MonoBehaviour
         this.transform.position = new Vector2(newxPos, -3);
     }
     
+    public void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+    }
 }

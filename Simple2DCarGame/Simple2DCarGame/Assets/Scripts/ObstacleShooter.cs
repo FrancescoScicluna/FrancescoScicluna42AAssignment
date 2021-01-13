@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleShooter : MonoBehaviour
 {
+    [SerializeField] float health = 1;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;

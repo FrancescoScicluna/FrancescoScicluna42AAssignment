@@ -118,6 +118,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   obstacleLaserPrefab: {fileID: 3677104289403730215, guid: 5321c9eb242219e4cbbd84e18dab6599, type: 3}
   obstacleLaserSpeed: 5
+  obstacleShootSound: {fileID: 8300000, guid: 3cf4b0932f5881f46b35650179c0fd17, type: 3}
+  obstacleShootSoundVolume: 0.75
 --- !u!114 &7858887573087513003
 MonoBehaviour:
   m_ObjectHideFlags: 0
