@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: -638324382174961871}
   - component: {fileID: 2391243610242224564}
   - component: {fileID: 7232168184769132548}
-  m_Layer: 0
+  - component: {fileID: 8578911222617420871}
+  m_Layer: 10
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 4f65833c5eca76d4b93774a72acecadb, type: 2}
+  playerPointSound: {fileID: 8300000, guid: 3cf4b0932f5881f46b35650179c0fd17, type: 3}
+  playerPointSoundVolume: 0.07
 --- !u!114 &-638324382174961871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +173,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8578911222617420871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373707352935468643}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180c5a116a5e3784aa9bc6206b288eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 0}
+  obstacleLaserSpeed: 5
+  shoot: 0
+  deathVFX: {fileID: 211274171051777513, guid: cd37165e26d1a4f4d862b89ff3464293, type: 3}
+  explosionDuration: 0.5

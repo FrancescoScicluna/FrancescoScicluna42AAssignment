@@ -6,8 +6,13 @@ public class ObstaclePathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
 
+    int points = 5;
+
     [SerializeField] WaveConfig waveConfig;
     int waypointIndex = 0;
+
+    [SerializeField] AudioClip playerPointSound;
+    [SerializeField] [Range(0, 1)] float playerPointSoundVolume = 0.75f;
 
     private void Start()
     {
@@ -35,7 +40,9 @@ public class ObstaclePathing : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<GameSession>().AddToScore(points);
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(playerPointSound, Camera.main.transform.position, playerPointSoundVolume);
         }
     }
     public void SetWaveConfig(WaveConfig waveConfigToSet)

@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] float health = 10f;
+    [SerializeField] int health = 10;
     [SerializeField] float moveSpeed = 10f;
 
     [SerializeField] AudioClip playerDeathSound;
-    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 1f;
+
+    [SerializeField] AudioClip playerHitSound;
+    [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
+
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     float xMin, xMax;
     float padding = 0.5f;
 
@@ -21,10 +28,17 @@ public class PlayerScript : MonoBehaviour
     private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamage();
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
         if (health <= 0)
         {
+            health = 0;
             Die();
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     // Start is called before the first frame update
@@ -61,5 +75,8 @@ public class PlayerScript : MonoBehaviour
     {
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+        FindObjectOfType<Level>().LoadGameOver();
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 }

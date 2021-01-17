@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1894977267976067654}
   - component: {fileID: -6190620067389232598}
   - component: {fileID: 4774771059747007542}
-  - component: {fileID: 4121513822790691155}
   - component: {fileID: -91033954427676950}
   - component: {fileID: 5316688843985175461}
-  m_Layer: 0
+  - component: {fileID: 836938030484669631}
+  m_Layer: 10
   m_Name: roadblock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,20 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 5b3a220d2ed108b4594e067c6239f5a1, type: 2}
+  playerPointSound: {fileID: 8300000, guid: 3cf4b0932f5881f46b35650179c0fd17, type: 3}
+  playerPointSoundVolume: 0.07
 --- !u!114 &4774771059747007542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560004432024003634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce73fbf0d02e899488a370466e92d50f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
---- !u!114 &4121513822790691155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,3 +170,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &836938030484669631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560004432024003634}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180c5a116a5e3784aa9bc6206b288eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleLaserPrefab: {fileID: 0}
+  obstacleLaserSpeed: 5
+  shoot: 0
+  deathVFX: {fileID: 211274171051777513, guid: cd37165e26d1a4f4d862b89ff3464293, type: 3}
+  explosionDuration: 0.5
