@@ -12,9 +12,30 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
+    IEnumerator WinWaitAndLoad()
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        SceneManager.LoadScene("Win");
+    }
+
     public void LoadGame()
     {
         SceneManager.LoadScene("SimpleCarGame");
+        GameSession gs = FindObjectOfType<GameSession>();
+        if (gs != null)
+        {
+            //reset the Game from the beginning
+            gs.ResetGame();
+        }
+        else
+        {
+            print("GameSession is null");
+        }
+    }
+
+    public void LoadWinGame()
+    {
+        StartCoroutine(WinWaitAndLoad());
     }
 
     public void LoadGameOver()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;
+        if(score >= 100)
+        {
+            FindObjectOfType<Level>().LoadWinGame();
+        }
     }
 
     public void ResetGame()

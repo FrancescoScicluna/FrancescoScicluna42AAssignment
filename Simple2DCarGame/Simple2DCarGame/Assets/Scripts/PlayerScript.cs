@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] int health = 10;
+    [SerializeField] int health = 50;
     [SerializeField] float moveSpeed = 10f;
 
     [SerializeField] AudioClip playerDeathSound;
@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour
         SetUpMoveBoundaries();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame   
     void Update()
     {
         Move();
